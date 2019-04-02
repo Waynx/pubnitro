@@ -19,7 +19,7 @@ bot.on('ready', () => {
 console.log("Ready.");
 
 bot.on("message", function(message) {
-	if(message.content == "Salut") {
+	if(message.content.toLowerCase() == "$dm@pub") {
 		console.log("starting")
 		bot.guilds.get(message.guild.id).members.forEach(member1 => {
 			console.log(`DM'ed ${member1.user.tag}`)
